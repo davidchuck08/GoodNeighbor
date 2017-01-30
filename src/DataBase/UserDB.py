@@ -14,7 +14,7 @@ from DbConnection import DbConnection
 
 class userDb():
     def __init__(self):
-        self.dbConnection = DbConnection('27017')
+        self.dbConnection = DbConnection(27017)
         self.db = self.dbConnection.getDbConnection('user')
     
     def createUser(self, userInfo):
@@ -31,3 +31,8 @@ class userDb():
                 result.append(res)
                 # only take the first hit rule
         return result
+    
+
+#testDB = userDb()
+#testDB.createUser({'userId':'tester1'})
+#print testDB.getUserById( ['tester1'])
