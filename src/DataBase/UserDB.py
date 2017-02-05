@@ -11,7 +11,17 @@ from array import *
 import types
 import re
 from DbConnection import DbConnection
-
+'''
+User template:
+userId
+user password --hash
+First Name
+Last Name
+Home address / zipcode
+office address / zipcode
+phone number
+roles:['picker', 'asker']
+'''
 class userDb():
     def __init__(self):
         self.dbConnection = DbConnection(27017)
